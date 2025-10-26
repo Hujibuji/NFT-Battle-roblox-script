@@ -46,12 +46,12 @@ local Button = Tab:CreateButton({
     10
   }
   game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("OpenCase"):InvokeServer(unpack(args))
-  wait(6)
-  local args = {
+    local args = {
     "Sell",
     "ALL"
   }
   game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Inventory"):FireServer(unpack(args))
+  wait(6)
   auto += 1
   
   if auto == 100000 then
@@ -69,12 +69,12 @@ local Button = Tab:CreateButton({
     10
   }
   game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("OpenCase"):InvokeServer(unpack(args))
-  wait(6)
-  local args = {
+    local args = {
     "Sell",
     "ALL"
   }
   game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Inventory"):FireServer(unpack(args))
+  wait(6)
   auto += 1
   
   if auto == 10000 then
@@ -87,17 +87,7 @@ local Button = Tab:CreateButton({
    Name = "Фарм 10К кейсов",
    Callback = function()
    while true do
-    local args = {
-    "Trash",
-    10
-  }
-  game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("OpenCase"):InvokeServer(unpack(args))
-  wait(6)
-  local args = {
-    "Sell",
-    "ALL"
-  }
-  game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Inventory"):FireServer(unpack(args))
+
   auto += 1
   
   if auto == 1000 then
@@ -115,12 +105,12 @@ local Button = Tab:CreateButton({
     10
   }
   game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("OpenCase"):InvokeServer(unpack(args))
-  wait(6)
-  local args = {
+    local args = {
     "Sell",
     "ALL"
   }
   game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Inventory"):FireServer(unpack(args))
+  wait(6)
   auto += 1
   
   if auto == 100 then
