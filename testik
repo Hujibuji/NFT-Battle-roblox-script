@@ -25,18 +25,24 @@ local Window = Rayfield:CreateWindow({
       RememberJoins = true -- Set this to false to make them join the discord every time they load it up
    },
 
-   KeySystem = false, -- Set this to true to use our key system
+   KeySystem = true, -- Set this to true to use our key system
    KeySettings = {
-      Title = "Untitled",
-      Subtitle = "Key System",
-      Note = "No method of obtaining the key is provided", -- Use this to tell the user how to get a key
+      Title = "Секретный ключ",
+      Subtitle = "Напиши его",
+      Note = "Кентам фри даю", -- Use this to tell the user how to get a key
       FileName = "Key", -- It is recommended to use something unique as other scripts using Rayfield may overwrite your key file
-      SaveKey = true, -- The user's key will be saved, but if you change the key, they will be unable to use your script
+      SaveKey = false, -- The user's key will be saved, but if you change the key, they will be unable to use your script
       GrabKeyFromSite = false, -- If this is true, set Key below to the RAW site you would like Rayfield to get the key from
-      Key = {"Hello"} -- List of keys that will be accepted by the system, can be RAW file links (pastebin, github etc) or simple strings ("hello","key22")
+      Key = {"gonduras","zhir"} -- List of keys that will be accepted by the system, can be RAW file links (pastebin, github etc) or simple strings ("hello","key22")
    }
 })
-local Tab = Window:CreateTab("Trash case", "rewind")
+local Tab = Window:CreateTab("Auto-Farm", "banknote") -- автофарм кейсов
+local Tab1 = Window:CreateTab("Credits", "creative-commons") -- о нас
+local Label = Tab:CreateLabel("Фармит Trash case")
+local Label = Tab1:CreateLabel("Кодер: Авед")
+local Label = Tab1:CreateLabel("Тестер: Авед")
+local Label = Tab1:CreateLabel("Гуи: Sirius")
+local Label = Tab1:CreateLabel("Мария: Зайцева")
 local Button = Tab:CreateButton({
    Name = "Фарм 1МЛН кейсов",
    Callback = function()
@@ -51,7 +57,7 @@ local Button = Tab:CreateButton({
     "ALL"
   }
   game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Inventory"):FireServer(unpack(args))
-  wait(6)
+  wait(1)
   auto += 1
   
   if auto == 100000 then
@@ -75,7 +81,7 @@ local Button = Tab:CreateButton({
     "ALL"
   }
   game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Inventory"):FireServer(unpack(args))
-  wait(6)
+  wait(1)
   auto += 1
   
   if auto == 10000 then
@@ -99,7 +105,7 @@ local Button = Tab:CreateButton({
     "ALL"
   }
   game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Inventory"):FireServer(unpack(args))
-  wait(6)
+  wait(1)
   auto += 1
   
   if auto == 1000 then
@@ -123,7 +129,7 @@ local Button = Tab:CreateButton({
     "ALL"
   }
   game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Inventory"):FireServer(unpack(args))
-  wait(6)
+  wait(1)
   auto += 1
   
   if auto == 100 then
@@ -147,7 +153,7 @@ local Button = Tab:CreateButton({
     "ALL"
   }
   game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Inventory"):FireServer(unpack(args))
-  wait(6)
+  wait(1)
   auto += 1
   
   if auto == 10 then
@@ -171,7 +177,7 @@ local Button = Tab:CreateButton({
     "ALL"
   }
   game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Inventory"):FireServer(unpack(args))
-  wait(6)
+  wait(1)
   auto += 1
   
   if auto == 1 then
@@ -179,5 +185,18 @@ local Button = Tab:CreateButton({
     break
   end
 end
+   end,
+})
+local Label = Tab:CreateLabel("Фармит тыквы")
+local Button = Tab:CreateButton({
+   Name = "Фарм тыкв",
+   Callback = function()
+   while true do
+    local args = {
+    	"Claim"
+    }
+    game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Halloween"):InvokeServer(unpack(args))
+    wait(5)
+   end
    end,
 })
