@@ -36,10 +36,11 @@ local Window = Rayfield:CreateWindow({
       Key = {"Hello"} -- List of keys that will be accepted by the system, can be RAW file links (pastebin, github etc) or simple strings ("hello","key22")
    }
 })
-local Tab = Window:CreateTab("Auto-Farm", "banknote") -- автофарм кейсов
-local Tab1 = Window:CreateTab("Credits", "creative-commons") -- о нас
 local Tab2 = Window:CreateTab("Info", "book-text") -- инфа
-local Label = Tab:CreateLabel("Фармит Trash case")
+local Tab4 = Window:CreateTab("Pumpkin farm", "banknote") -- автофарм тыкв
+local Tab = Window:CreateTab("Trash", "banknote") -- автофарм trash
+local Tab3 = Window:CreateTab("Beggar", "banknote") -- автофарм beggar
+local Tab1 = Window:CreateTab("Credits", "creative-commons") -- о нас
 local Label = Tab1:CreateLabel("Кодер: Авед")
 local Label = Tab1:CreateLabel("Тестер: Авед, Дэмэнтый")
 local Label = Tab1:CreateLabel("Гуи: Sirius")
@@ -199,8 +200,7 @@ local Button = Tab:CreateButton({
 end
    end,
 })
-local Label = Tab:CreateLabel("Фармит тыквы")
-local Button = Tab:CreateButton({
+local Button = Tab4:CreateButton({
    Name = "Фарм тыкв",
    Callback = function()
    while true do
@@ -216,5 +216,149 @@ local Button = Tab2:CreateButton({
    Name = "Полностью закрыть GUI",
    Callback = function()
    Rayfield:Destroy()
+   end,
+})
+local Button = Tab3:CreateButton({
+   Name = "Фарм 1МЛН кейсов",
+   Callback = function()
+   while true do
+    local args = {
+    "Beggar",
+    10
+  }
+  game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("OpenCase"):InvokeServer(unpack(args))
+    local args = {
+    "Sell",
+    "ALL"
+  }
+  game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Inventory"):FireServer(unpack(args))
+  wait(1)
+  auto += 1
+  
+  if auto == 100000 then
+    auto = 0
+    break
+  end
+end
+   end,
+})
+local Button = Tab3:CreateButton({
+   Name = "Фарм 100K кейсов",
+   Callback = function()
+   while true do
+    local args = {
+    "Beggar",
+    10
+  }
+  game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("OpenCase"):InvokeServer(unpack(args))
+    local args = {
+    "Sell",
+    "ALL"
+  }
+  game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Inventory"):FireServer(unpack(args))
+  wait(1)
+  auto += 1
+  
+  if auto == 10000 then
+    auto = 0
+    break
+  end
+end
+   end,
+})
+local Button = Tab3:CreateButton({
+   Name = "Фарм 10K кейсов",
+   Callback = function()
+   while true do
+    local args = {
+    "Beggar",
+    10
+  }
+  game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("OpenCase"):InvokeServer(unpack(args))
+    local args = {
+    "Sell",
+    "ALL"
+  }
+  game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Inventory"):FireServer(unpack(args))
+  wait(1)
+  auto += 1
+  
+  if auto == 1000 then
+    auto = 0
+    break
+  end
+end
+   end,
+})
+local Button = Tab3:CreateButton({
+   Name = "Фарм 1K кейсов",
+   Callback = function()
+   while true do
+    local args = {
+    "Beggar",
+    10
+  }
+  game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("OpenCase"):InvokeServer(unpack(args))
+    local args = {
+    "Sell",
+    "ALL"
+  }
+  game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Inventory"):FireServer(unpack(args))
+  wait(1)
+  auto += 1
+  
+  if auto == 100 then
+    auto = 0
+    break
+  end
+end
+   end,
+})
+local Button = Tab3:CreateButton({
+   Name = "Фарм 100 кейсов",
+   Callback = function()
+   while true do
+    local args = {
+    "Beggar",
+    10
+  }
+  game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("OpenCase"):InvokeServer(unpack(args))
+    local args = {
+    "Sell",
+    "ALL"
+  }
+  game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Inventory"):FireServer(unpack(args))
+  wait(1)
+  auto += 1
+  
+  if auto == 10 then
+    auto = 0
+    break
+  end
+end
+   end,
+})
+local Button = Tab3:CreateButton({
+   Name = "Фарм 10 кейсов",
+   Callback = function()
+   while true do
+    local args = {
+    "Beggar",
+    10
+  }
+  game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("OpenCase"):InvokeServer(unpack(args))
+    local args = {
+    "Sell",
+    "ALL"
+  }
+  game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Inventory"):FireServer(unpack(args))
+  wait(1)
+  auto += 1
+  
+  if auto == 1 then
+    auto = 0
+    break
+  end
+end
    end,
 })
