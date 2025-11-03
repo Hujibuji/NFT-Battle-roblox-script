@@ -1,0 +1,21 @@
+local Lighting = game:GetService("Lighting")
+
+local function bafd()
+    Lighting.Ambient = Color3.fromRGB(255, 255, 255)
+    Lighting.OutdoorAmbient = Color3.fromRGB(255, 255, 255)
+    Lighting.Brightness = 1
+    Lighting.GlobalShadows = false
+    Lighting.FogStart = 99e9
+    Lighting.FogEnd = 99e9
+    Lighting.FogColor = Color3.fromRGB(255, 255, 255)
+end
+
+bafd()
+
+Lighting:GetPropertyChangedSignal("Ambient"):Connect(bafd)
+Lighting:GetPropertyChangedSignal("OutdoorAmbient"):Connect(bafd)
+Lighting:GetPropertyChangedSignal("Brightness"):Connect(bafd)
+Lighting:GetPropertyChangedSignal("GlobalShadows"):Connect(bafd)
+Lighting:GetPropertyChangedSignal("FogStart"):Connect(bafd)
+Lighting:GetPropertyChangedSignal("FogEnd"):Connect(bafd)
+Lighting:GetPropertyChangedSignal("FogColor"):Connect(bafd)
