@@ -1,0 +1,120 @@
+-- label: 1 - деф серый, 2 - зеленое, 3 - красное
+local Luna = loadstring(game:HttpGet("https://raw.nebulasoftworks.xyz/luna", true))()
+local Window = Luna:CreateWindow({
+    Name = "GovnoHub | kalloware", 
+    Subtitle = nil, 
+    LogoID = nil, 
+    LoadingEnabled = false, 
+    LoadingTitle = "GovnoHub", 
+    LoadingSubtitle = "by kalloware", 
+
+    ConfigSettings = {
+        RootFolder = nil, 
+        ConfigFolder = "t" 
+    },
+
+    KeySystem = false, 
+    KeySettings = {
+        Title = "t",
+        Subtitle = "t",
+        Note = "t",
+        SaveInRoot = false, 
+        SaveKey = true, 
+        Key = {"t"}, 
+        SecondAction = {
+            Enabled = true, 
+            Type = "Link", 
+            Parameter = "" 
+        }
+    }
+})
+local Tab1 = Window:CreateTab({
+    Name = "Universal",
+    Icon = "public",
+    ImageSource = "Material",
+    ShowTitle = true 
+})
+local Tab2 = Window:CreateTab({
+    Name = "Autofarm scripts",
+    Icon = "monetization_on",
+    ImageSource = "Material",
+    ShowTitle = true 
+})
+local Label = Tab1:CreateLabel({
+    Text = "Графика",
+    Style = 1 
+})
+local Button = Tab1:CreateButton({
+    Name = "Светло",
+    Description = nil, 
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Hujibuji/NFT-Battle-roblox-script/refs/heads/main/fullbrtight"))()
+    end
+})
+local Button = Tab1:CreateButton({
+    Name = "ФПС Бустер (говнище)",
+    Description = nil, 
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Nhat473/Fps-Boost-V3/refs/heads/main/MinhNhat%20HUB.lua"))()
+    end
+})
+local Button = Tab1:CreateButton({
+    Name = "ФПС Бустер (нормальный)",
+    Description = nil, 
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/JoshzzAlteregooo/JoshzzFpsBoosterVersion3/refs/heads/main/JoshzzNewFpsBooster"))()
+    end
+})
+local Button = Tab1:CreateButton({
+    Name = "РоZтяг экрана",
+    Description = nil, 
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Hujibuji/NFT-Battle-roblox-script/refs/heads/main/poztyag"))()
+    end
+})
+local Label = Tab1:CreateLabel({
+    Text = "Деф скрипты",
+    Style = 1 
+})
+local Button = Tab1:CreateButton({
+    Name = "infinite Yield",
+    Description = nil, 
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source"))()
+    end
+})
+local Button = Tab1:CreateButton({
+    Name = "Nameless Admin (лучше iy юзайте)",
+    Description = nil, 
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/FilteringEnabled/NamelessAdmin/main/Source"))()
+    end
+})
+local Button = Tab1:CreateButton({
+    Name = "Simple Spy Beta",
+    Description = nil, 
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Hujibuji/NFT-Battle-roblox-script/refs/heads/main/ssbeta"))()
+    end
+})
+local Button = Tab1:CreateButton({
+    Name = "Simple Spy Stable",
+    Description = nil, 
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Hujibuji/NFT-Battle-roblox-script/refs/heads/main/ssstable"))()
+    end
+})
+local Button = Tab2:CreateButton({
+    Name = "MM2",
+    Description = nil, 
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/nootmaus/IceHubMM2/refs/heads/main/.lua"))()
+    end
+})
+local Button = Tab2:CreateButton({
+    Name = "BABFT",
+    Description = nil, 
+    Callback = function()
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/TheRealAsu/BABFT/refs/heads/main/Loader.lua'))()
+    end
+})
