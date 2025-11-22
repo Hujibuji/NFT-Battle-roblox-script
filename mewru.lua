@@ -102,7 +102,7 @@ local Button = TabFarm:CreateButton({
 })
 local Divider = TabFarm:CreateDivider()
 local Section = TabFarm:CreateSection("Автобитва")
-local Label = TabFarm:CreateLabel("Начните битву, только потом, жмите старт")
+local Label = TabFarm:CreateLabel("Начните битву, только потом, жмите начать")
 local Button = TabFarm:CreateButton({
    Name = "Начать автобитву",
    Callback = function()
